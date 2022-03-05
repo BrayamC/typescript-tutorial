@@ -1,10 +1,11 @@
 
-// 37:24
+// 56:17
 import React, {useState} from 'react';
 import { DEFAULT_ECDH_CURVE } from 'tls';
 import "./App.css"
 import InputField from './components/InputField'
 import Todo from "./model";
+import TodoList from "./components/TodoList"
 
 // Functional Components
 const App:React.FC = () => {
@@ -20,12 +21,11 @@ const App:React.FC = () => {
     }
   }
 
-  console.log(todo);
-
   return (
     <div className="App">
       <span className="heading"> Taskify </span>
       <InputField todo = {todo} setTodo={setTodo} handleAdd={handleAdd}/>
+      <TodoList todos = {todos} setTodos={setTodos}/>
     </div>
   );
 }
